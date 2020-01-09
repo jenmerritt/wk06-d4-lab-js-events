@@ -28,7 +28,7 @@ const handleFormSubmit = function (event) {
   const categoryItem = document.createElement('li');
   categoryItem.textContent = `Category: ${event.target.category.value}`;
 
-  const list = document.querySelector('ul');
+  const list = document.querySelector('#reading-list');
   list.appendChild(newTitleItem);
   list.appendChild(newAuthorItem);
   list.appendChild(categoryItem);
@@ -38,5 +38,11 @@ const handleFormSubmit = function (event) {
 };
 
 const handleDeleteButtonClick = function (event) {
-  console.log("this works");
+  const list = document.querySelector('#reading-list');
+  list.parentNode.removeChild(list);
+
+  const newList = document.createElement('ul');
+  newList.id = 'reading-list';
+  document.body.appendChild(newList);
+
 }
