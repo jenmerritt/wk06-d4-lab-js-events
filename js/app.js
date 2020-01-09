@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', handleFormSubmit);
 
   const deleteButton = document.createElement('button');
-  deleteButton.textContent = "Delete All";
+  deleteButton.textContent = "Delete All Items";
   deleteButton.id = "deleteButton";
   document.body.appendChild(deleteButton);
 
@@ -34,10 +34,12 @@ const handleFormSubmit = function (event) {
   list.appendChild(categoryItem);
 
   this.reset();
-  console.log("it works");
+  // console.log("it works");
 };
 
 const handleDeleteButtonClick = function () {
+
+//innerHTML clears the child elements.
 
   document.getElementById("reading-list").innerHTML = "";
 
