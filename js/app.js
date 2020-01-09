@@ -17,9 +17,13 @@ const handleFormSubmit = function (event) {
   const newAuthorItem = document.createElement('li');
   newAuthorItem.textContent = `Author: ${event.target.author.value}`;
 
+  const categoryItem = document.createElement('li');
+  categoryItem.textContent = `Category: ${event.target.category.value}`;
+
   const list = document.querySelector('ul');
   list.appendChild(newTitleItem);
   list.appendChild(newAuthorItem);
+  list.appendChild(categoryItem);
 
   this.reset();
   console.log("it works");
