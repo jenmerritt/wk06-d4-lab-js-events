@@ -4,6 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('#new-item-form');
   form.addEventListener('submit', handleFormSubmit);
 
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = "Delete All";
+  deleteButton.id = "deleteButton";
+  document.body.appendChild(deleteButton);
+
+  const button = document.querySelector('#deleteButton');
+  button.addEventListener('click', handleDeleteButtonClick);
+
 })
 
 const handleFormSubmit = function (event) {
@@ -28,3 +36,7 @@ const handleFormSubmit = function (event) {
   this.reset();
   console.log("it works");
 };
+
+const handleDeleteButtonClick = function (event) {
+  console.log("this works");
+}
