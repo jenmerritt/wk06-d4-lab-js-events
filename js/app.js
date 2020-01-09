@@ -9,8 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
 const handleFormSubmit = function (event) {
   event.preventDefault();
 
+  // console.log(event.target.title.value);
 
+  const newTitleItem = document.createElement('li');
+  newTitleItem.textContent = `Title: ${event.target.title.value}`;
 
-  this.reset();
+  const list = document.querySelector('ul');
+  list.appendChild(newTitleItem);
+
+  // this.reset();
   console.log("it works");
 };
