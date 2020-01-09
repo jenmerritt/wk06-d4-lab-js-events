@@ -37,12 +37,17 @@ const handleFormSubmit = function (event) {
   console.log("it works");
 };
 
-const handleDeleteButtonClick = function (event) {
-  const list = document.querySelector('#reading-list');
-  list.parentNode.removeChild(list);
+const handleDeleteButtonClick = function () {
 
-  const newList = document.createElement('ul');
-  newList.id = 'reading-list';
-  document.body.appendChild(newList);
+  document.getElementById("reading-list").innerHTML = "";
+
+  // const list = document.querySelector('#reading-list');
+  // list.parentNode.removeChild(list);
+
+  // const list = document.querySelector('#reading-list');
+
+  // const newList = document.createElement('ul');
+  // newList.id = 'reading-list';
+  // document.body.appendChild(newList);
 
 }
