@@ -14,9 +14,13 @@ const handleFormSubmit = function (event) {
   const newTitleItem = document.createElement('li');
   newTitleItem.textContent = `Title: ${event.target.title.value}`;
 
+  const newAuthorItem = document.createElement('li');
+  newAuthorItem.textContent = `Author: ${event.target.author.value}`;
+
   const list = document.querySelector('ul');
   list.appendChild(newTitleItem);
+  list.appendChild(newAuthorItem);
 
-  // this.reset();
+  this.reset();
   console.log("it works");
 };
